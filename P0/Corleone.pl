@@ -4,3 +4,6 @@ consult("C:/Users/david.craciunescu/Documents/repos/CRA/arbol_familia_corleone.p
 ancestro(X,Y):-progenitor(X,Y).
 ancestro(X,Y):-progenitor(X,Z), ancestro(Z,Y).
 
+%DESCENDIENTE: X ES DESCENDIENTE DE Y SI X ES PRIMOGENITO DE Y, O SI X ES PRIMOGENITO DE UN DESCENDIENTE DE Y
+descendiente(X,Y):-primogenito(X,Y).
+descendiente(X,Y):-primogenito(X,Z),descendiente(Z,Y).
